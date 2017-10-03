@@ -8,11 +8,11 @@ branches:
 notifications:
   email:
     recipients:
-    - j.bernal@upm.es
+    - githubuniversity@gmail.com
 script:
 # Calidad codigo: Sonarcloud
 - mvn org.jacoco:jacoco-maven-plugin:prepare-agent verify --settings settings.xml
-- mvn sonar:sonar -Dsonar.organization=miw-upm-github -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=$SONAR --settings settings.xml
+- mvn sonar:sonar -Dsonar.organization=josang-github -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=$miw --settings settings.xml --settings settings.xml
 # Unit Test & Integration Test
 - mvn verify --settings settings.xml
 # Deploy & Functional Testing
